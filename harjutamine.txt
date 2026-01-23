@@ -1,12 +1,14 @@
 import math
 
+# Salvestab teksti faili
 def txt_fail():
     text = input("Sisesta tekst: ")
     with open("Fail.txt", "w", encoding="utf-8") as file:
         file.write(text)
-    print("Tekst salvestatud faili Fail.txt")
+    print("Tekst salvestatud")
 
 
+# Lahendab ruutvõrrandi
 def ruutvorrand():
     a = float(input("Sisesta a: "))
     b = float(input("Sisesta b: "))
@@ -16,17 +18,15 @@ def ruutvorrand():
     print("Diskriminant:", d)
 
     if d > 0:
-        x1 = (-b + math.sqrt(d)) / (2 * a)
-        x2 = (-b - math.sqrt(d)) / (2 * a)
-        print("x1 =", x1)
-        print("x2 =", x2)
+        print("x1 =", (-b + math.sqrt(d)) / (2 * a))
+        print("x2 =", (-b - math.sqrt(d)) / (2 * a))
     elif d == 0:
-        x = -b / (2 * a)
-        print("x =", x)
+        print("x =", -b / (2 * a))
     else:
         print("Lahendusi pole")
 
 
+# Lihtne kalkulaator
 def kalkulaator():
     print("1. Liitmine")
     print("2. Lahutamine")
@@ -58,9 +58,10 @@ def kalkulaator():
         print("Vale valik")
 
 
+# Peamenüü
 def main():
     print("Menu:")
-    print("1. Teksti sisestamine ja faili salvestamine")
+    print("1. Tekst faili")
     print("2. Kalkulaator")
     print("3. Välju")
 
