@@ -65,24 +65,4 @@ def kalkulaator():
     else:
         print("Vale valik")
 
-
-# Peamenüü
-def main():
-    print("Menu:")
-    print("1. Tekst faili")
-    print("2. Kalkulaator")
-    print("3. Välju")
-
-    valik = input("Vali number: ")
-
-    if valik == "1":
-        txt_fail()
-    elif valik == "2":
-        kalkulaator()
-    elif valik == "3":
-        print("Programm lõpetatud")
-    else:
-        print("Vale valik")
-
-
 main()
