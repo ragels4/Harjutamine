@@ -10,9 +10,13 @@ def txt_fail():
 
 # Lahendab ruutvõrrandi
 def ruutvorrand():
-    a = float(input("Sisesta a: "))
-    b = float(input("Sisesta b: "))
-    c = float(input("Sisesta c: "))
+    try:
+        a = float(input("Sisesta a: "))
+        b = float(input("Sisesta b: "))
+        c = float(input("Sisesta c: "))
+    except ValueError:
+        print("Vale sisend")
+        return
 
     d = b ** 2 - 4 * a * c
     print("Diskriminant:", d)
@@ -37,8 +41,12 @@ def kalkulaator():
     choice = input("Vali tegevus: ")
 
     if choice in ["1", "2", "3", "4"]:
-        a = float(input("Sisesta esimene arv: "))
-        b = float(input("Sisesta teine arv: "))
+        try:
+            a = float(input("Sisesta esimene arv: "))
+            b = float(input("Sisesta teine arv: "))
+        except ValueError:
+            print("Vale sisend")
+            return
 
         if choice == "1":
             print("Vastus:", a + b)
